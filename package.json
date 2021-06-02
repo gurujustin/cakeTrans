@@ -1,0 +1,22 @@
+{
+  "name": "david-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ethersproject/providers": "^5.1.2",
+    "@pancakeswap-libs/sdk": "^1.0.1",
+    "axios": "^0.21.1",
+    "dotenv": "^9.0.1",
+    "ethers": "^5.1.4",
+    "express": "^4.17.1",
+    "request-ip": "^2.1.3",
+    "web3": "^1.3.5"
+  }
+}
