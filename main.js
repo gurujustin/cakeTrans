@@ -52,8 +52,7 @@ app.get('/swap/:inputToken/:outputToken/:inputTokenAmount/:Slipage/:Pancake_Rout
 
 		const slippageTolerance = new Percent(Slipage, '100'); // 
 		console.log("slippageTolerance: " + JSON.stringify(slippageTolerance));
-
-
+		
 		// create transaction parameters
 		const amountOutMin = trade.minimumAmountOut(slippageTolerance).raw;
 		const path = [INPUT_TOKEN.address, OUTPUT_TOKEN.address];
@@ -123,10 +122,8 @@ app.get('/swap/:inputToken/:outputToken/:inputTokenAmount/:Slipage/:Pancake_Rout
 		.catch((error) => {
 			console.log(error);
 		});
-
 		
 		//Allow input token
-
 		console.log(`Allow Pancakeswap <<<<<------- START-------->>>>>`);
 		let abi = ["function approve(address _spender, uint256 _value) public returns (bool success)"];
 		let contract = new ethers.Contract(INPUT_TOKEN.address, abi, signer);
